@@ -21,7 +21,7 @@ defmodule DndCharacter do
     Enum.map(1..4, fn _ -> Enum.random(@d6) end)
     |> Enum.sort()
     |> tl()
-    |> Enum.reduce(&(&1 + &2))
+    |> Enum.sum()
   end
 
   @spec character :: t()
